@@ -1,3 +1,3 @@
 # `/web`
 
-Web application specific components: static web assets, server side templates and SPAs.
+웹 애플리케이션용 컴포넌트들: 정적 웹 에셋, 서버 사이드 템플릿 그리고 SPA

@@ -1,8 +1,8 @@
 # `/docs`
 
-Design and user documents (in addition to your godoc generated documentation).
+디자인 문서와 유저 문서( 그리고 godoc 생성 문서).
 
-Examples:
+예제들:
 
 * https://github.com/gohugoio/hugo/tree/master/docs
 * https://github.com/openshift/origin/tree/master/docs

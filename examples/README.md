@@ -1,8 +1,8 @@
 # `/examples`
 
-Examples for your applications and/or public libraries.
+애플리케이션과 공개 라이브러리를 위한 예시들.
 
-Examples:
+예제들:
 
 * https://github.com/nats-io/nats.go/tree/master/examples
 * https://github.com/docker-slim/docker-slim/tree/master/examples

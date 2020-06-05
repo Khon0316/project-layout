@@ -1,14 +1,15 @@
 # `/cmd`
 
-Main applications for this project.
+프로젝트를 위한 메인 애플리케이션들.
 
-The directory name for each application should match the name of the executable you want to have (e.g., `/cmd/myapp`).
+각 애플리케이션의 디렉토리 이름은 원하는 실행파일의 이름과 동일해야 합니다(예, `/cmd/myapp`).
+애플리케이션 디렉토리에 많은 코드를 두지 마세요.
+다른 프로젝트에서 임포트되고 사용되는 것을 고려한다면 코드는 `/pkg` 디렉토리에 있어야 합니다.
+재사용이 불가하거나 재사용을 원치 않는 코드는 `/internal` 디렉토리에 두세요.
+다른 사람들이 어떻게 사용할지 모르니, 확실히 의도를 밝혀주세요.
+일반적으로 `/internal`과 `/pkg`폴더에서 코드를 임포트하고 호출하는 짧은 `main` 함수를 작성합니다.
 
-Don't put a lot of code in the application directory. If you think the code can be imported and used in other projects, then it should live in the `/pkg` directory. If the code is not reusable or if you don't want others to reuse it, put that code in the `/internal` directory. You'll be surprised what others will do, so be explicit about your intentions!
-
-It's common to have a small `main` function that imports and invokes the code from the `/internal` and `/pkg` directories and nothing else.
-
-Examples:
+예제들:
 
 * https://github.com/heptio/ark/tree/master/cmd (just a really small `main` function with everything else in packages)
 * https://github.com/moby/moby/tree/master/cmd

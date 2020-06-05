@@ -1,3 +1,3 @@
 # `/assets`
 
-Other assets to go along with your repository (images, logos, etc).
+기타 프로젝트에서 사용된 에셋들(이미지, 로고 등등).

@@ -1,3 +1,3 @@
 # `/githooks`
 
-Git hooks.
+Git 훅들.

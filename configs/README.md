@@ -1,5 +1,5 @@
 # `/configs`
 
-Configuration file templates or default configs.
+설정 파일 템플릿 또는 기본 설정들.
 
-Put your `confd` or `consule-template` template files here.
+`confd`나 `consul-template` 템플릿 파일을 여기 두세요. 

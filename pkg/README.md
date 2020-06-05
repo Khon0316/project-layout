@@ -1,14 +1,22 @@
 # `/pkg`
 
-Library code that's ok to use by external applications (e.g., `/pkg/mypubliclib`). Other projects will import these libraries expecting them to work, so think twice before you put something here :-) Note that the `internal` directory is a better way to ensure your private packages are not importable because it's enforced by Go. The `/pkg` directory is still a good way to explicitly communicate that the code in that directory is safe for use by others. The [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) blog post by Travis Jeffery provides a good overview of the `pkg` and `internal` directories and when it might make sense to use them.
+외부 애플리케이션에 의해 사용이 가능한 라이브러리 코드(예시, `/pkg/mypubliclib`).
 
-It's also a way to group Go code in one place when your root directory contains lots of non-Go components and directories making it easier to run various Go tools (as mentioned in these talks: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) from GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) and [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
+다른 프로젝트들은 잘 동작하기를 기대하면서 이 라이브러리들을 임포트 할 것입니다. 그래서 여기에 무엇인가를 추가할 때는 신중해야 합니다. :-) 프라이빗 패키지를 임포트 불가하도록 하기위한 방법은 Go에 의새 강제 되는 `internal` 디렉토리입니다.
+`/pkg`은 다른 이들이 사용하기에  이 디렉토리에 코드는 안전하다는 커뮤니테이션을 명시적으로 할 수 있는 좋은 방법입니다.
 
-Note that this is not a universally accepted pattern and for every popular repo that uses it you can find 10 that don't. It's up to you to decide if you want to use this pattern or not. Regardless of whether or not it's a good pattern more people will know what you mean than not. It is a bit confusing for new Go devs, but it's a pretty simple confusion to resolve and that's one of the goals for this project layout repo.
+Travis Jeffery의 [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) 블로그 포스트는  `pkg`와 `internal` 디렉토리의 좋은 개요와 사용에 대한 이해를 제공합니다.
 
-Ok not to use it if your app project is really small and where an extra level of nesting doesn't add much value (unless you really want to). Think about it when it's getting big enough and your root directory gets pretty busy (especially if you have a lot of non-Go app components).
+프로젝트 루트 디렉토리에 Go 가 아닌 컴포넌트와 디렉토리를 많이 포함하고 있을 때 다양한 Go 툴들을 쉽게 실행할 수 있도록 코드를 한곳에 그룹핑 해 주는 방법을 제공한다(이 영상들에서 언급한것 처럼: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) from GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) 그리고 [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
-Examples:
+이 레이아웃 패턴을 사용하는 유명한 Go 리포지토리를 보려면 [`/pkg`](pkg/README.md)를 참고하세요.
+이 패턴을 일반적이지만, 보편적으로 받아들여 지는 것은 아니며 일부 Go 커뮤니티에서는 추천하지 않기도 합니다.
+
+
+앱 프로젝트가 정말 작거나 중첩 레벨을 추가하는 것이 별로 가치가 없거나(또는 정말 원치 않는다면 :-)) 이 패턴을 사용하지 않아도 괜찮습니다.
+프로젝트가 충분히 커져서 루트 디렉토리가 정말 붐빌 때(특히, Go가 아닌 컴포넌트가 많을 때)를 고려해 보세요. 
+
+예제들:
 
 * https://github.com/prometheus/prometheus/tree/master/pkg
 * https://github.com/jaegertracing/jaeger/tree/master/pkg
